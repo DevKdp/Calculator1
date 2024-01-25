@@ -1,0 +1,36 @@
+<div class="calculator">
+  <!-- <div class="calculator__output">0</div> -->
+  <form action="" (submit)="calculate()">
+    <input type="text" [(ngModel)]="toShow" name="text" autocomplete="off"
+      oninput="this.value=this.value.replace(/[^0-9+\-*/().&.%]/g, '').replace(/(\..*)\./g, '$1');">
+  </form>
+  <div class="calculator__keys">
+    <button class="key operator" (click)="keyPressed('+')">+</button>
+    <button class="key operator" (click)="keyPressed('-')">-</button>
+    <button class="key operator" (click)="keyPressed('*')">&times;</button>
+    <button class="key operator" (click)="keyPressed('/')">÷</button>
+    <button class="key" (click)="keyPressed('7')">7</button>
+    <button class="key" (click)="keyPressed('8')">8</button>
+    <button class="key" (click)="keyPressed('9')">9</button>
+    <button class="key operator" (click)="keyPressed('%')">%</button>
+    <button class="key" (click)="keyPressed('4')">4</button>
+    <button class="key" (click)="keyPressed('5')">5</button>
+    <button class="key" (click)="keyPressed('6')">6</button>
+    <button class="key operator" (click)='keyPressed("\(")'>(</button>
+    <button class="key" (click)="keyPressed('1')">1</button>
+    <button class="key" (click)="keyPressed('2')">2</button>
+    <button class="key" (click)="keyPressed('3')">3</button>
+    <button class="key operator" (click)='keyPressed("\)")'>)</button>
+    <button class="key" (click)="keyPressed('0')">0</button>
+    <button class="key" (click)="keyPressed('.')">.</button>
+    <button class="key" (click)="clear()">AC</button>
+    <button class="key calculate" (click)="calculate()">=</button>
+
+  </div>
+  <div>
+    History:
+    <textarea [(ngModel)]="calHistory" name="" id="" readonly></textarea>
+  </div>
+
+
+</div>
