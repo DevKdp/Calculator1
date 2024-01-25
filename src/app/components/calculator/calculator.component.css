@@ -74,6 +74,8 @@ input {
 }
 
 textarea{
-  max-height: 80px;
+  height: 200px;
+  width: 220px;
+  max-height: 100px;
   max-width: 220px;
 }
