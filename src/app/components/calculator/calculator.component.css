@@ -78,4 +78,6 @@ textarea{
   width: 220px;
   max-height: 100px;
   max-width: 220px;
+  color: white;
+  background-color: rgb(161, 159, 159);
 }
